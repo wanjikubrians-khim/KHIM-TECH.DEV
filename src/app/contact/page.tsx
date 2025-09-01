@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, Send, Github, ExternalLink } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -66,6 +66,12 @@ export default function Contact() {
       title: "Response Time",
       details: "24 Hours",
       description: "We'll get back to you quickly"
+    },
+    {
+      icon: <Github className="w-6 h-6" />,
+      title: "Portfolio",
+      details: "Brian's Work",
+      description: "View founder's personal projects"
     }
   ]
 
@@ -104,7 +110,7 @@ export default function Contact() {
       {/* Contact Info */}
       <section className="py-16 bg-dark-50 border-y border-neon-cyan/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {contactInfo.map((info, index) => (
               <div key={index} className="text-center">
                 <div className="bg-gradient-to-br from-neon-cyan to-neon-green w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 neon-border">
@@ -115,9 +121,21 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-white mb-2 font-mono">
                   {info.title}
                 </h3>
-                <p className="text-neon-cyan font-medium mb-1">
-                  {info.details}
-                </p>
+                {info.title === "Portfolio" ? (
+                  <a 
+                    href="https://portfolio-eosin-six-13.vercel.app/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neon-cyan hover:text-white font-medium mb-1 transition-colors inline-flex items-center justify-center"
+                  >
+                    <ExternalLink className="mr-1 w-4 h-4" />
+                    {info.details}
+                  </a>
+                ) : (
+                  <p className="text-neon-cyan font-medium mb-1">
+                    {info.details}
+                  </p>
+                )}
                 <p className="text-gray-300 text-sm">
                   {info.description}
                 </p>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, BarChart3, Brain, Code, Database, TrendingUp, Users } from 'lucide-react'
+import { ArrowRight, Brain, Database, Code, BarChart3, Shield, Zap, Github } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import AITrialSection from '@/components/AITrialSection'
@@ -70,6 +70,90 @@ export default function Home() {
               >
                 &gt; View Portfolio
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="py-16 bg-gradient-to-br from-dark-50 to-black border-y border-neon-cyan/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <div className="terminal-text text-sm mb-4">
+                &gt; Founder & Chief Executive Officer
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-mono">
+                Meet <span className="neon-text">Brian Wanjiku</span>
+              </h2>
+              <p className="text-gray-300 mb-6 text-lg">
+                Visionary technology leader and founder of KHIM-TECH, specializing in enterprise-grade 
+                AI solutions, advanced data science, and scalable full-stack development. With a passion 
+                for transforming complex business challenges into innovative digital solutions.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center justify-center lg:justify-start">
+                  <div className="w-2 h-2 bg-neon-green rounded-full mr-3 animate-pulse"></div>
+                  <span className="text-gray-300 font-mono">Full-Stack Development Expert</span>
+                </div>
+                <div className="flex items-center justify-center lg:justify-start">
+                  <div className="w-2 h-2 bg-neon-cyan rounded-full mr-3 animate-pulse"></div>
+                  <span className="text-gray-300 font-mono">AI & Machine Learning Specialist</span>
+                </div>
+                <div className="flex items-center justify-center lg:justify-start">
+                  <div className="w-2 h-2 bg-neon-purple rounded-full mr-3 animate-pulse"></div>
+                  <span className="text-gray-300 font-mono">Data Science & Analytics Leader</span>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a 
+                  href="https://portfolio-eosin-six-13.vercel.app/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-neon-cyan to-neon-green text-black px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 inline-flex items-center justify-center font-mono"
+                >
+                  <Github className="mr-2 w-5 h-5" />
+                  &gt; View Personal Portfolio
+                </a>
+                <Link 
+                  href="/contact" 
+                  className="border border-neon-cyan text-neon-cyan px-6 py-3 rounded-lg font-semibold hover:bg-neon-cyan/10 transition-all duration-300 font-mono neon-border inline-flex items-center justify-center"
+                >
+                  &gt; Connect with Brian
+                </Link>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="glass-card p-8 rounded-lg neon-border">
+                <div className="terminal-text text-sm mb-4">
+                  &gt; System.founder.profile --verbose
+                </div>
+                <div className="space-y-4">
+                  <div className="border-l-2 border-neon-cyan pl-4">
+                    <h4 className="text-white font-semibold font-mono mb-2">Leadership Philosophy</h4>
+                    <p className="text-gray-300 text-sm">
+                      "Innovation through precision engineering and data-driven decision making. 
+                      Every line of code, every algorithm, every solution is crafted to exceed enterprise expectations."
+                    </p>
+                  </div>
+                  <div className="border-l-2 border-neon-green pl-4">
+                    <h4 className="text-white font-semibold font-mono mb-2">Technical Expertise</h4>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="bg-neon-cyan/20 text-neon-cyan px-2 py-1 rounded text-xs font-mono">React/Next.js</span>
+                      <span className="bg-neon-green/20 text-neon-green px-2 py-1 rounded text-xs font-mono">Python/ML</span>
+                      <span className="bg-neon-purple/20 text-neon-purple px-2 py-1 rounded text-xs font-mono">Data Science</span>
+                      <span className="bg-neon-cyan/20 text-neon-cyan px-2 py-1 rounded text-xs font-mono">Cloud Architecture</span>
+                    </div>
+                  </div>
+                  <div className="border-l-2 border-neon-purple pl-4">
+                    <h4 className="text-white font-semibold font-mono mb-2">Mission Statement</h4>
+                    <p className="text-gray-300 text-sm">
+                      "Empowering enterprises with cutting-edge technology solutions that drive 
+                      measurable business outcomes and sustainable growth."
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

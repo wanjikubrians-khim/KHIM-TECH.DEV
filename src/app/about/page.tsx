@@ -1,4 +1,4 @@
-import { Award, BookOpen, Code2, Database, GraduationCap, Target, Users, Zap } from 'lucide-react'
+import { Award, BookOpen, Code2, Database, GraduationCap, Target, Users, Zap, Github, ExternalLink } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -102,15 +102,113 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <div className="terminal-text text-sm mb-4 animate-pulse">
-              &gt; Accessing company database...
+              &gt; Accessing founder profile...
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono">
               About <span className="gradient-text">&lt;KHIM-TECH/&gt;</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Elite technology company with specialized divisions in data science, AI/ML engineering, 
-              full-stack development, and business intelligence solutions.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Founded and led by <span className="neon-text font-semibold">Brian Wanjiku</span>, an elite technology company 
+              specializing in enterprise-grade AI solutions, advanced data science, and scalable full-stack development.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://portfolio-eosin-six-13.vercel.app/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-neon-cyan to-neon-green text-black px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 inline-flex items-center justify-center font-mono"
+              >
+                <Github className="mr-2 w-5 h-5" />
+                &gt; Founder's Portfolio
+              </a>
+              <a 
+                href="#founder-story" 
+                className="border border-neon-cyan text-neon-cyan px-6 py-3 rounded-lg font-semibold hover:bg-neon-cyan/10 transition-all duration-300 font-mono neon-border inline-flex items-center justify-center"
+              >
+                &gt; Learn More
+                <ExternalLink className="ml-2 w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Story Section */}
+      <section id="founder-story" className="py-16 bg-gradient-to-br from-dark-50 to-black border-y border-neon-cyan/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="terminal-text text-sm mb-4">
+                &gt; Founder.profile --detailed
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-mono">
+                Meet the <span className="neon-text">Founder</span>
+              </h2>
+              <div className="space-y-6">
+                <div className="border-l-4 border-neon-cyan pl-6">
+                  <h3 className="text-xl font-semibold text-white mb-3 font-mono">Brian Wanjiku</h3>
+                  <p className="text-gray-300 mb-4">
+                    Founder & CEO of KHIM-TECH, Brian is a visionary technology leader with expertise spanning 
+                    enterprise AI solutions, advanced statistical analysis, and scalable full-stack development. 
+                    His passion for transforming complex business challenges into innovative digital solutions 
+                    has driven KHIM-TECH to become a trusted partner for organizations worldwide.
+                  </p>
+                </div>
+                <div className="border-l-4 border-neon-green pl-6">
+                  <h4 className="text-lg font-semibold text-white mb-3 font-mono">Technical Leadership</h4>
+                  <p className="text-gray-300 mb-4">
+                    With a proven track record of architecting enterprise-grade systems and leading 
+                    multidisciplinary teams, Brian combines deep technical expertise with strategic 
+                    business acumen to deliver solutions that drive measurable outcomes.
+                  </p>
+                </div>
+                <div className="border-l-4 border-neon-purple pl-6">
+                  <h4 className="text-lg font-semibold text-white mb-3 font-mono">Innovation Philosophy</h4>
+                  <p className="text-gray-300">
+                    "Every line of code, every algorithm, every solution is crafted to exceed enterprise 
+                    expectations. Innovation through precision engineering and data-driven decision making."
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="glass-card p-8 rounded-lg neon-border">
+              <div className="terminal-text text-sm mb-4">
+                &gt; Technical.expertise --summary
+              </div>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-white font-semibold font-mono mb-3">Core Specializations</h4>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-neon-cyan/20 text-neon-cyan px-3 py-2 rounded text-sm font-mono text-center">React/Next.js</div>
+                    <div className="bg-neon-green/20 text-neon-green px-3 py-2 rounded text-sm font-mono text-center">Python/ML</div>
+                    <div className="bg-neon-purple/20 text-neon-purple px-3 py-2 rounded text-sm font-mono text-center">Data Science</div>
+                    <div className="bg-neon-cyan/20 text-neon-cyan px-3 py-2 rounded text-sm font-mono text-center">Cloud Architecture</div>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold font-mono mb-3">Professional Links</h4>
+                  <div className="space-y-3">
+                    <a 
+                      href="https://portfolio-eosin-six-13.vercel.app/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-neon-cyan hover:text-white transition-colors font-mono text-sm"
+                    >
+                      <Github className="mr-2 w-4 h-4" />
+                      Personal Portfolio & Projects
+                    </a>
+                    <div className="flex items-center text-gray-300 font-mono text-sm">
+                      <ExternalLink className="mr-2 w-4 h-4" />
+                      Email: wanjikubrians11@gmail.com
+                    </div>
+                    <div className="flex items-center text-gray-300 font-mono text-sm">
+                      <ExternalLink className="mr-2 w-4 h-4" />
+                      WhatsApp: +254 791 710 423
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

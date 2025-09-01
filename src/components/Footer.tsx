@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react'
+import { Mail, Phone, MapPin, Linkedin, Github, ExternalLink } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -9,10 +9,21 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold gradient-text mb-4 font-mono">&lt;KHIM-TECH/&gt;</h3>
-            <p className="text-gray-300 mb-4 text-sm">
-              Elite technology company transforming enterprises through cutting-edge AI solutions, 
-              advanced statistical analysis, and scalable full-stack development.
+            <p className="text-gray-300 mb-2 text-sm">
+              Founded by <span className="neon-text font-semibold">Brian Wanjiku</span> - Elite technology company 
+              transforming enterprises through cutting-edge AI solutions, advanced statistical analysis, and scalable full-stack development.
             </p>
+            <div className="mb-4">
+              <a 
+                href="https://portfolio-eosin-six-13.vercel.app/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neon-cyan hover:text-white transition-colors font-mono text-xs inline-flex items-center"
+              >
+                <ExternalLink className="mr-1 w-3 h-3" />
+                View Founder's Portfolio
+              </a>
+            </div>
             <div className="terminal-text text-xs mb-4">
               &gt; status: OPERATIONAL | uptime: 99.9% | clients: GLOBAL
             </div>
@@ -20,7 +31,12 @@ export default function Footer() {
               <a href="#" className="text-gray-400 hover:text-neon-cyan transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-neon-cyan transition-colors">
+              <a 
+                href="https://portfolio-eosin-six-13.vercel.app/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-neon-cyan transition-colors"
+              >
                 <Github size={20} />
               </a>
             </div>

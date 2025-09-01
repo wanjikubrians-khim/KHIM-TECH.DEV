@@ -48,7 +48,7 @@ export default function Home() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="font-mono">&lt;</span>Enterprise Data Solutions<span className="font-mono">/&gt;</span>
-              <span className="gradient-text block font-mono">// Powered by Expert Teams</span>
+              <span className="gradient-text block font-mono">{/* Powered by Expert Teams */}</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               KHIM-TECH is a cutting-edge technology company specializing in enterprise-grade data science, 
@@ -181,7 +181,7 @@ export default function Home() {
               </h3>
               <p className="text-gray-300 mb-6 text-sm">
                 Our team is ready to architect and deploy your next-generation data solutions. 
-                Let's build something extraordinary together.
+                Let&apos;s build something extraordinary together.
               </p>
               <Link 
                 href="/contact" 

@@ -68,42 +68,59 @@ export default function ProductLanding() {
         preview: "Modern e-commerce landing page with product grid, shopping cart integration, and responsive design",
         description: "Generated a complete React e-commerce website starter with Stripe payment integration, product catalog, user authentication, and admin dashboard. Includes responsive design and SEO optimization.",
         livePreview: `
-          <div style="min-height: 400px; background: white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
-            <nav style="display: flex; justify-content: space-between; align-items: center; padding: 24px; border-bottom: 1px solid #e5e7eb;">
-              <h1 style="font-size: 24px; font-weight: bold; color: #111827;">ShopTech</h1>
+          <div style="min-height: 400px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; position: relative; overflow: hidden;">
+            <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.1);"></div>
+            <nav style="position: relative; z-10; display: flex; justify-content: space-between; align-items: center; padding: 24px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.2);">
+              <h1 style="font-size: 28px; font-weight: 800; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">ShopTech</h1>
               <div style="display: flex; align-items: center; gap: 16px;">
-                <button style="padding: 8px 16px; background: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer;">
-                  🛒 Cart
+                <button style="padding: 12px 20px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 12px; font-weight: 600; box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3); transition: all 0.3s ease;">
+                  🛒 Cart (3)
                 </button>
               </div>
             </nav>
             
-            <main style="padding: 48px 24px;">
+            <main style="position: relative; z-10; padding: 48px 24px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);">
               <div style="max-width: 1200px; margin: 0 auto;">
                 <div style="text-align: center; margin-bottom: 48px;">
-                  <h2 style="font-size: 48px; font-weight: bold; margin-bottom: 24px; color: #111827;">
-                    Premium Products
+                  <h2 style="font-size: 56px; font-weight: 900; margin-bottom: 24px; background: linear-gradient(135deg, #1e293b, #475569); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1;">
+                    Premium Collection
                   </h2>
-                  <p style="font-size: 18px; color: #6b7280; margin-bottom: 32px;">
-                    Discover our curated collection of high-quality items
+                  <p style="font-size: 20px; color: #64748b; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                    Discover our curated collection of luxury items crafted by world-class artisans
                   </p>
-                  <button style="padding: 12px 32px; background: linear-gradient(to right, #2563eb, #3b82f6); color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">
-                    Shop Now
+                  <button style="padding: 16px 40px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 16px; font-size: 18px; font-weight: 600; box-shadow: 0 12px 40px rgba(102, 126, 234, 0.4); transition: all 0.3s ease; transform: translateY(0);">
+                    Explore Collection
                   </button>
                 </div>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-                  <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; text-align: center;">
-                    <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; margin-bottom: 16px;"></div>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: #111827;">Product Name</h3>
-                    <p style="color: #6b7280; margin-bottom: 16px;">Premium quality item</p>
-                    <div style="font-size: 20px; font-weight: bold; color: #2563eb;">$99.99</div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+                  <div style="background: white; border-radius: 24px; padding: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="width: 100%; height: 240px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; margin-bottom: 20px; position: relative; overflow: hidden;">
+                      <div style="position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.9); border-radius: 8px; padding: 8px; backdrop-filter: blur(10px);">
+                        <span style="font-size: 12px; font-weight: 600; color: #667eea;">NEW</span>
+                      </div>
+                      <div style="position: absolute; bottom: 16px; left: 16px; color: white; font-weight: 600;">Premium Item</div>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #1e293b;">Luxury Watch</h3>
+                    <p style="color: #64748b; margin-bottom: 20px; line-height: 1.5;">Swiss-made timepiece with premium materials and precision engineering</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <div style="font-size: 24px; font-weight: 800; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">$2,499</div>
+                      <button style="padding: 10px 20px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 12px; font-weight: 600; font-size: 14px;">Add to Cart</button>
+                    </div>
                   </div>
-                  <div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; text-align: center;">
-                    <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 8px; margin-bottom: 16px;"></div>
-                    <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px; color: #111827;">Product Name</h3>
-                    <p style="color: #6b7280; margin-bottom: 16px;">Premium quality item</p>
-                    <div style="font-size: 20px; font-weight: bold; color: #2563eb;">$149.99</div>
+                  <div style="background: white; border-radius: 24px; padding: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.2);">
+                    <div style="width: 100%; height: 240px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 16px; margin-bottom: 20px; position: relative; overflow: hidden;">
+                      <div style="position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.9); border-radius: 8px; padding: 8px; backdrop-filter: blur(10px);">
+                        <span style="font-size: 12px; font-weight: 600; color: #f5576c;">HOT</span>
+                      </div>
+                      <div style="position: absolute; bottom: 16px; left: 16px; color: white; font-weight: 600;">Trending</div>
+                    </div>
+                    <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #1e293b;">Designer Bag</h3>
+                    <p style="color: #64748b; margin-bottom: 20px; line-height: 1.5;">Handcrafted leather bag with modern design and premium finish</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <div style="font-size: 24px; font-weight: 800; background: linear-gradient(135deg, #f093fb, #f5576c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">$899</div>
+                      <button style="padding: 10px 20px; background: linear-gradient(135deg, #f093fb, #f5576c); color: white; border: none; border-radius: 12px; font-weight: 600; font-size: 14px;">Add to Cart</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -146,30 +163,65 @@ print(f"High-risk customers: {len(high_risk_customers)}")
         preview: "Comprehensive churn analysis with 87% accuracy prediction model and actionable customer retention insights",
         description: "Generated complete customer churn analysis pipeline with machine learning predictions, risk segmentation, and automated reporting dashboard. Includes data preprocessing, feature engineering, and business intelligence insights.",
         livePreview: `
-          <div style="min-height: 400px; background: #111827; color: white; font-family: 'Courier New', monospace; padding: 24px;">
-            <div style="background: #1f2937; border-radius: 12px; padding: 24px; margin-bottom: 24px;">
-              <h3 style="color: #10b981; margin-bottom: 16px; font-size: 18px;">📊 Customer Churn Analysis Dashboard</h3>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
-                <div style="background: #374151; padding: 16px; border-radius: 8px; text-align: center;">
-                  <div style="color: #ef4444; font-size: 24px; font-weight: bold;">23.4%</div>
-                  <div style="color: #9ca3af; font-size: 14px;">Churn Rate</div>
+          <div style="min-height: 400px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px; position: relative; overflow: hidden;">
+            <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 20%, rgba(6, 182, 212, 0.1), transparent 50%), radial-gradient(circle at 70% 80%, rgba(16, 185, 129, 0.1), transparent 50%);"></div>
+            <div style="position: relative; z-10; background: rgba(30, 41, 59, 0.8); border-radius: 20px; padding: 32px; backdrop-filter: blur(20px); border: 1px solid rgba(6, 182, 212, 0.2); box-shadow: 0 25px 50px rgba(0,0,0,0.3);">
+              <div style="display: flex; items-center; margin-bottom: 32px;">
+                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #06b6d4, #10b981); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; box-shadow: 0 8px 32px rgba(6, 182, 212, 0.3);">
+                  <span style="font-size: 24px;">📊</span>
                 </div>
-                <div style="background: #374151; padding: 16px; border-radius: 8px; text-align: center;">
-                  <div style="color: #10b981; font-size: 24px; font-weight: bold;">87.2%</div>
-                  <div style="color: #9ca3af; font-size: 14px;">Model Accuracy</div>
-                </div>
-                <div style="background: #374151; padding: 16px; border-radius: 8px; text-align: center;">
-                  <div style="color: #f59e0b; font-size: 24px; font-weight: bold;">1,247</div>
-                  <div style="color: #9ca3af; font-size: 14px;">High Risk</div>
+                <div>
+                  <h3 style="color: #06b6d4; font-size: 24px; font-weight: 700; margin-bottom: 4px;">Customer Churn Analytics</h3>
+                  <div style="color: #94a3b8; font-size: 14px; font-family: 'Courier New', monospace;">Real-time ML Predictions • Live Dashboard</div>
                 </div>
               </div>
-              <div style="background: #374151; height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative;">
-                <div style="width: 80%; height: 2px; background: #10b981; position: relative;">
-                  <div style="position: absolute; left: 20%; top: -4px; width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></div>
-                  <div style="position: absolute; left: 40%; top: -6px; width: 8px; height: 8px; background: #f59e0b; border-radius: 50%;"></div>
-                  <div style="position: absolute; left: 70%; top: -2px; width: 8px; height: 8px; background: #ef4444; border-radius: 50%;"></div>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-bottom: 32px;">
+                <div style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(239, 68, 68, 0.08)); padding: 28px; border-radius: 20px; text-align: center; border: 1px solid rgba(239, 68, 68, 0.3); backdrop-filter: blur(15px); box-shadow: 0 8px 32px rgba(239, 68, 68, 0.2);">
+                  <div style="color: #ef4444; font-size: 42px; font-weight: 900; margin-bottom: 12px; text-shadow: 0 0 30px rgba(239, 68, 68, 0.6);">23.4%</div>
+                  <div style="color: #f1f5f9; font-size: 16px; font-weight: 700; margin-bottom: 12px;">Churn Rate</div>
+                  <div style="width: 100%; height: 8px; background: rgba(239, 68, 68, 0.2); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 23%; height: 100%; background: linear-gradient(90deg, #ef4444, #f87171); border-radius: 4px; box-shadow: 0 0 15px rgba(239, 68, 68, 0.6); animation: pulse 3s infinite;"></div>
+                  </div>
+                  <div style="margin-top: 12px; color: #fca5a5; font-size: 12px; font-weight: 500;">↑ 2.1% vs last month</div>
                 </div>
-                <div style="position: absolute; bottom: 16px; left: 16px; color: #9ca3af; font-size: 12px;">Churn Prediction Timeline</div>
+                <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.08)); padding: 28px; border-radius: 20px; text-align: center; border: 1px solid rgba(16, 185, 129, 0.3); backdrop-filter: blur(15px); box-shadow: 0 8px 32px rgba(16, 185, 129, 0.2);">
+                  <div style="color: #10b981; font-size: 42px; font-weight: 900; margin-bottom: 12px; text-shadow: 0 0 30px rgba(16, 185, 129, 0.6);">87.2%</div>
+                  <div style="color: #f1f5f9; font-size: 16px; font-weight: 700; margin-bottom: 12px;">Model Accuracy</div>
+                  <div style="width: 100%; height: 8px; background: rgba(16, 185, 129, 0.2); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 87%; height: 100%; background: linear-gradient(90deg, #10b981, #34d399); border-radius: 4px; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6); animation: pulse 3s infinite;"></div>
+                  </div>
+                  <div style="margin-top: 12px; color: #86efac; font-size: 12px; font-weight: 500;">↑ 3.2% improvement</div>
+                </div>
+                <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.08)); padding: 28px; border-radius: 20px; text-align: center; border: 1px solid rgba(245, 158, 11, 0.3); backdrop-filter: blur(15px); box-shadow: 0 8px 32px rgba(245, 158, 11, 0.2);">
+                  <div style="color: #f59e0b; font-size: 42px; font-weight: 900; margin-bottom: 12px; text-shadow: 0 0 30px rgba(245, 158, 11, 0.6);">142</div>
+                  <div style="color: #f1f5f9; font-size: 16px; font-weight: 700; margin-bottom: 12px;">At-Risk Customers</div>
+                  <div style="width: 100%; height: 8px; background: rgba(245, 158, 11, 0.2); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 45%; height: 100%; background: linear-gradient(90deg, #f59e0b, #fbbf24); border-radius: 4px; box-shadow: 0 0 15px rgba(245, 158, 11, 0.6); animation: pulse 3s infinite;"></div>
+                  </div>
+                  <div style="margin-top: 12px; color: #fcd34d; font-size: 12px; font-weight: 500;">Requires attention</div>
+                </div>
+              </div>
+              
+              <div style="background: rgba(51, 65, 85, 0.6); height: 220px; border-radius: 16px; padding: 24px; position: relative; overflow: hidden; border: 1px solid rgba(6, 182, 212, 0.2); backdrop-filter: blur(10px);">
+                <div style="color: #94a3b8; font-size: 16px; font-weight: 600; margin-bottom: 20px; display: flex; align-items: center;">
+                  <div style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; margin-right: 12px; box-shadow: 0 0 10px rgba(16, 185, 129, 0.8); animation: pulse 2s infinite;"></div>
+                  Real-time Prediction Stream
+                </div>
+                <svg style="width: 100%; height: 140px; filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.3));">
+                  <defs>
+                    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <polyline points="0,70 40,55 80,80 120,45 160,65 200,50 240,75 280,40 320,60" stroke="url(#gradient1)" stroke-width="3" fill="none" stroke-linecap="round"/>
+                  <polyline points="0,90 40,85 80,100 120,75 160,95 200,80 240,105 280,70 320,90" stroke="#f59e0b" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+                </svg>
+                <div style="position: absolute; bottom: 16px; right: 16px; color: #06b6d4; font-size: 12px; font-weight: 600; display: flex; align-items: center;">
+                  <div style="width: 6px; height: 6px; background: #10b981; border-radius: 50%; margin-right: 8px; animation: pulse 1s infinite;"></div>
+                  Live ML Processing
+                </div>
               </div>
             </div>
           </div>
@@ -228,37 +280,74 @@ export default function IoTDashboard() {
         preview: "Real-time IoT monitoring dashboard with live sensor data, alerts, and historical analytics",
         description: "Generated complete IoT monitoring solution with WebSocket real-time data streaming, interactive charts, alert systems, and mobile-responsive design. Includes backend API and database optimization.",
         livePreview: `
-          <div style="min-height: 400px; background: #0f172a; color: white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px;">
-            <div style="background: #1e293b; border-radius: 12px; padding: 24px;">
-              <h3 style="color: #06b6d4; margin-bottom: 24px; font-size: 18px; font-weight: 600;">🌡️ IoT Sensor Dashboard</h3>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px;">
-                <div style="background: #334155; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #06b6d4;">
-                  <div style="color: #06b6d4; font-size: 28px; font-weight: bold; margin-bottom: 8px;">24.5°C</div>
-                  <div style="color: #94a3b8; font-size: 14px;">Temperature</div>
-                  <div style="width: 100%; height: 4px; background: #475569; border-radius: 2px; margin-top: 8px;">
-                    <div style="width: 65%; height: 100%; background: #06b6d4; border-radius: 2px;"></div>
-                  </div>
+          <div style="min-height: 400px; background: linear-gradient(135deg, #0c4a6e 0%, #155e75 50%, #0e7490 100%); color: white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px; position: relative; overflow: hidden;">
+            <div style="position: absolute; inset: 0; background: radial-gradient(circle at 20% 30%, rgba(6, 182, 212, 0.15), transparent 40%), radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.15), transparent 40%), radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1), transparent 60%);"></div>
+            <div style="position: relative; z-10; background: rgba(15, 23, 42, 0.85); border-radius: 24px; padding: 32px; backdrop-filter: blur(20px); border: 1px solid rgba(6, 182, 212, 0.3); box-shadow: 0 25px 50px rgba(0,0,0,0.4);">
+              <div style="display: flex; items-center; margin-bottom: 32px;">
+                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-right: 24px; box-shadow: 0 12px 40px rgba(6, 182, 212, 0.4);">
+                  <span style="font-size: 28px;">🌡️</span>
                 </div>
-                <div style="background: #334155; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #10b981;">
-                  <div style="color: #10b981; font-size: 28px; font-weight: bold; margin-bottom: 8px;">68%</div>
-                  <div style="color: #94a3b8; font-size: 14px;">Humidity</div>
-                  <div style="width: 100%; height: 4px; background: #475569; border-radius: 2px; margin-top: 8px;">
-                    <div style="width: 68%; height: 100%; background: #10b981; border-radius: 2px;"></div>
+                <div>
+                  <h3 style="color: #06b6d4; font-size: 28px; font-weight: 800; margin-bottom: 6px; text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);">IoT Control Center</h3>
+                  <div style="color: #94a3b8; font-size: 16px; font-family: 'SF Mono', 'Monaco', monospace; display: flex; align-items: center;">
+                    <div style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; margin-right: 8px; box-shadow: 0 0 10px rgba(16, 185, 129, 0.8); animation: pulse 1.5s infinite;"></div>
+                    Real-time Monitoring • 24/7 Active
                   </div>
-                </div>
-                <div style="background: #334155; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #f59e0b;">
-                  <div style="color: #f59e0b; font-size: 28px; font-weight: bold; margin-bottom: 8px;">⚡ ON</div>
-                  <div style="color: #94a3b8; font-size: 14px;">Status</div>
-                  <div style="width: 12px; height: 12px; background: #10b981; border-radius: 50%; margin: 8px auto; animation: pulse 2s infinite;"></div>
                 </div>
               </div>
-              <div style="background: #334155; height: 180px; border-radius: 8px; padding: 16px; position: relative; overflow: hidden;">
-                <div style="color: #94a3b8; font-size: 14px; margin-bottom: 16px;">Real-time Data Stream</div>
-                <svg style="width: 100%; height: 120px;">
-                  <polyline points="0,60 50,45 100,70 150,30 200,55 250,40 300,65" stroke="#06b6d4" stroke-width="2" fill="none"/>
-                  <polyline points="0,80 50,75 100,90 150,65 200,85 250,70 300,95" stroke="#10b981" stroke-width="2" fill="none"/>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 32px;">
+                <div style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(6, 182, 212, 0.05)); padding: 28px; border-radius: 20px; text-align: center; border: 1px solid rgba(6, 182, 212, 0.3); backdrop-filter: blur(15px); box-shadow: 0 8px 32px rgba(6, 182, 212, 0.2);">
+                  <div style="color: #06b6d4; font-size: 42px; font-weight: 900; margin-bottom: 12px; text-shadow: 0 0 30px rgba(6, 182, 212, 0.6);">24.5°C</div>
+                  <div style="color: #f1f5f9; font-size: 16px; font-weight: 700; margin-bottom: 12px;">Temperature</div>
+                  <div style="width: 100%; height: 8px; background: rgba(6, 182, 212, 0.2); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 65%; height: 100%; background: linear-gradient(90deg, #06b6d4, #0891b2); border-radius: 4px; box-shadow: 0 0 15px rgba(6, 182, 212, 0.6); animation: pulse 3s infinite;"></div>
+                  </div>
+                  <div style="margin-top: 12px; color: #94a3b8; font-size: 12px; font-weight: 500;">Optimal Range</div>
+                </div>
+                <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05)); padding: 28px; border-radius: 20px; text-align: center; border: 1px solid rgba(16, 185, 129, 0.3); backdrop-filter: blur(15px); box-shadow: 0 8px 32px rgba(16, 185, 129, 0.2);">
+                  <div style="color: #10b981; font-size: 42px; font-weight: 900; margin-bottom: 12px; text-shadow: 0 0 30px rgba(16, 185, 129, 0.6);">68%</div>
+                  <div style="color: #f1f5f9; font-size: 16px; font-weight: 700; margin-bottom: 12px;">Humidity</div>
+                  <div style="width: 100%; height: 8px; background: rgba(16, 185, 129, 0.2); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 68%; height: 100%; background: linear-gradient(90deg, #10b981, #059669); border-radius: 4px; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6); animation: pulse 3s infinite;"></div>
+                  </div>
+                  <div style="margin-top: 12px; color: #94a3b8; font-size: 12px; font-weight: 500;">Normal Level</div>
+                </div>
+                <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.05)); padding: 28px; border-radius: 20px; text-align: center; border: 1px solid rgba(245, 158, 11, 0.3); backdrop-filter: blur(15px); box-shadow: 0 8px 32px rgba(245, 158, 11, 0.2);">
+                  <div style="color: #f59e0b; font-size: 32px; font-weight: 900; margin-bottom: 12px; text-shadow: 0 0 30px rgba(245, 158, 11, 0.6); display: flex; align-items: center; justify-content: center;">
+                    <span style="margin-right: 8px;">⚡</span> ONLINE
+                  </div>
+                  <div style="color: #f1f5f9; font-size: 16px; font-weight: 700; margin-bottom: 12px;">System Status</div>
+                  <div style="width: 16px; height: 16px; background: #10b981; border-radius: 50%; margin: 12px auto; box-shadow: 0 0 25px rgba(16, 185, 129, 1); animation: pulse 1.5s infinite;"></div>
+                  <div style="margin-top: 8px; color: #94a3b8; font-size: 12px; font-weight: 500;">All Systems Active</div>
+                </div>
+              </div>
+              
+              <div style="background: rgba(30, 41, 59, 0.7); height: 200px; border-radius: 20px; padding: 28px; position: relative; overflow: hidden; border: 1px solid rgba(6, 182, 212, 0.3); backdrop-filter: blur(15px); box-shadow: inset 0 0 30px rgba(6, 182, 212, 0.1);">
+                <div style="color: #f1f5f9; font-size: 18px; font-weight: 700; margin-bottom: 24px; display: flex; align-items: center;">
+                  <div style="width: 12px; height: 12px; background: #10b981; border-radius: 50%; margin-right: 16px; box-shadow: 0 0 20px rgba(16, 185, 129, 1); animation: pulse 2s infinite;"></div>
+                  Live Sensor Data Stream
+                </div>
+                <svg style="width: 100%; height: 120px; filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.4));">
+                  <defs>
+                    <linearGradient id="iotGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.8" />
+                      <stop offset="50%" style="stop-color:#10b981;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.8" />
+                    </linearGradient>
+                  </defs>
+                  <polyline points="0,60 50,45 100,70 150,35 200,55 250,40 300,65 350,30" stroke="url(#iotGradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+                  <polyline points="0,80 50,75 100,90 150,65 200,85 250,70 300,95 350,60" stroke="#f59e0b" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+                  <circle cx="300" cy="65" r="4" fill="#06b6d4" style="animation: pulse 2s infinite;">
+                    <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+                  </circle>
                 </svg>
-                <div style="position: absolute; bottom: 8px; right: 8px; color: #94a3b8; font-size: 12px;">Live Updates</div>
+                <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(6, 182, 212, 0.2); color: #06b6d4; padding: 8px 16px; border-radius: 12px; font-size: 14px; font-weight: 600; border: 1px solid rgba(6, 182, 212, 0.4); backdrop-filter: blur(10px);">
+                  <div style="display: flex; align-items: center;">
+                    <div style="width: 6px; height: 6px; background: #10b981; border-radius: 50%; margin-right: 8px; animation: pulse 1s infinite;"></div>
+                    Real-time Processing
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -314,34 +403,81 @@ export default function CustomApp() {
         preview: "Enterprise-grade application template with security, scalability, and modern architecture",
         description: "Generated custom solution architecture with security protocols, scalable backend, and modern frontend. Includes API design, database optimization, and deployment configuration.",
         livePreview: `
-          <div style="min-height: 400px; background: #f8fafc; color: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px;">
-            <div style="background: white; border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-              <div style="display: flex; align-items: center; margin-bottom: 24px;">
-                <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 16px;">
-                  <span style="color: white; font-weight: bold;">ES</span>
+          <div style="min-height: 400px; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%); color: #1e293b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 24px; position: relative; overflow: hidden;">
+            <div style="position: absolute; inset: 0; background: radial-gradient(circle at 30% 20%, rgba(6, 182, 212, 0.08), transparent 50%), radial-gradient(circle at 70% 80%, rgba(16, 185, 129, 0.08), transparent 50%);"></div>
+            <div style="position: relative; z-10; background: rgba(255, 255, 255, 0.95); border-radius: 24px; padding: 32px; backdrop-filter: blur(20px); border: 1px solid rgba(6, 182, 212, 0.15); box-shadow: 0 25px 50px rgba(0,0,0,0.1);">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 2px solid #f1f5f9;">
+                <div style="display: flex; align-items: center;">
+                  <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-right: 20px; box-shadow: 0 12px 40px rgba(6, 182, 212, 0.3);">
+                    <span style="font-size: 24px; color: white;">🛍️</span>
+                  </div>
+                  <div>
+                    <h1 style="color: #1e293b; font-size: 32px; font-weight: 900; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">TechStore Pro</h1>
+                    <div style="color: #64748b; font-size: 14px; font-weight: 500; margin-top: 4px;">Premium Technology Marketplace</div>
+                  </div>
                 </div>
-                <h3 style="font-size: 24px; font-weight: bold; color: #1e293b;">Enterprise Solution</h3>
-              </div>
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
-                <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; text-align: center;">
-                  <div style="color: #3b82f6; font-size: 24px; margin-bottom: 8px;">🛡️</div>
-                  <div style="font-weight: 600; margin-bottom: 4px;">Security</div>
-                  <div style="color: #64748b; font-size: 14px;">Enterprise-grade</div>
-                </div>
-                <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; text-align: center;">
-                  <div style="color: #10b981; font-size: 24px; margin-bottom: 8px;">⚡</div>
-                  <div style="font-weight: 600; margin-bottom: 4px;">Performance</div>
-                  <div style="color: #64748b; font-size: 14px;">High-speed</div>
-                </div>
-                <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; text-align: center;">
-                  <div style="color: #8b5cf6; font-size: 24px; margin-bottom: 8px;">📊</div>
-                  <div style="font-weight: 600; margin-bottom: 4px;">Analytics</div>
-                  <div style="color: #64748b; font-size: 14px;">Real-time</div>
+                <div style="display: flex; gap: 20px; align-items: center;">
+                  <div style="background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; padding: 12px 24px; border-radius: 16px; font-size: 16px; font-weight: 700; box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4); display: flex; align-items: center;">
+                    <span style="margin-right: 8px; font-size: 20px;">🛒</span> Cart (3)
+                  </div>
+                  <div style="background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 12px 24px; border-radius: 16px; font-size: 16px; font-weight: 700; box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);">Login</div>
                 </div>
               </div>
-              <div style="background: #f8fafc; border: 2px dashed #cbd5e1; border-radius: 8px; padding: 32px; text-align: center;">
-                <div style="color: #64748b; margin-bottom: 16px;">📈 Interactive Dashboard</div>
-                <div style="display: flex; justify-content: space-around; align-items: end; height: 80px; margin-bottom: 16px;">
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
+                <div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9)); border: 2px solid rgba(6, 182, 212, 0.15); border-radius: 20px; padding: 24px; text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.08); backdrop-filter: blur(15px); transition: all 0.3s ease;">
+                  <div style="width: 100%; height: 160px; background: linear-gradient(135deg, #f1f5f9, #e2e8f0); border-radius: 16px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: #64748b; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(45deg, transparent 30%, rgba(6, 182, 212, 0.1) 50%, transparent 70%); animation: shimmer 2s infinite;"></div>
+                    <div style="position: relative; z-10; font-size: 48px;">📱</div>
+                  </div>
+                  <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 12px; color: #1e293b;">Premium Smartphone</h3>
+                  <p style="color: #64748b; font-size: 15px; margin-bottom: 20px; line-height: 1.5;">Latest flagship model with advanced AI camera and 5G connectivity</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <div style="display: flex; align-items: center;">
+                      <span style="font-size: 28px; font-weight: 900; color: #06b6d4; text-shadow: 0 2px 4px rgba(6, 182, 212, 0.3);">$899</span>
+                      <span style="font-size: 18px; color: #94a3b8; text-decoration: line-through; margin-left: 12px;">$1,199</span>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 700; box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);">25% OFF</div>
+                  </div>
+                  <button style="background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; border: none; padding: 16px 32px; border-radius: 16px; cursor: pointer; font-size: 16px; font-weight: 700; width: 100%; box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4); transition: all 0.3s ease;">Add to Cart</button>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.9)); border: 2px solid rgba(16, 185, 129, 0.15); border-radius: 20px; padding: 24px; text-align: center; box-shadow: 0 12px 40px rgba(0,0,0,0.08); backdrop-filter: blur(15px); transition: all 0.3s ease;">
+                  <div style="width: 100%; height: 160px; background: linear-gradient(135deg, #f1f5f9, #e2e8f0); border-radius: 16px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; color: #64748b; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(45deg, transparent 30%, rgba(16, 185, 129, 0.1) 50%, transparent 70%); animation: shimmer 2s infinite;"></div>
+                    <div style="position: relative; z-10; font-size: 48px;">💻</div>
+                  </div>
+                  <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 12px; color: #1e293b;">Gaming Laptop</h3>
+                  <p style="color: #64748b; font-size: 15px; margin-bottom: 20px; line-height: 1.5;">High-performance gaming laptop with RTX graphics and ultra-fast SSD</p>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <div style="display: flex; align-items: center;">
+                      <span style="font-size: 28px; font-weight: 900; color: #10b981; text-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);">$1,299</span>
+                      <span style="font-size: 18px; color: #94a3b8; text-decoration: line-through; margin-left: 12px;">$1,599</span>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #f59e0b, #d97706); color: white; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 700; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);">LIMITED</div>
+                  </div>
+                  <button style="background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; padding: 16px 32px; border-radius: 16px; cursor: pointer; font-size: 16px; font-weight: 700; width: 100%; box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4); transition: all 0.3s ease;">Add to Cart</button>
+                </div>
+              </div>
+              
+              <div style="margin-top: 32px; padding: 24px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05), rgba(16, 185, 129, 0.05)); border-radius: 20px; border: 1px solid rgba(6, 182, 212, 0.2);">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <div style="display: flex; align-items: center;">
+                    <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 16px; box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);">
+                      <span style="color: white; font-size: 20px;">🚚</span>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: #1e293b; font-size: 16px;">Free Express Shipping</div>
+                      <div style="color: #64748b; font-size: 14px;">On orders over $500</div>
+                    </div>
+                  </div>
+                  <div style="background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; padding: 12px 24px; border-radius: 16px; font-size: 14px; font-weight: 700; box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);">Shop Now</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `,
+        <div style="display: flex; justify-content: space-around; align-items: end; height: 80px; margin-bottom: 16px;">
                   <div style="width: 20px; height: 60px; background: #3b82f6; border-radius: 4px;"></div>
                   <div style="width: 20px; height: 45px; background: #10b981; border-radius: 4px;"></div>
                   <div style="width: 20px; height: 70px; background: #f59e0b; border-radius: 4px;"></div>

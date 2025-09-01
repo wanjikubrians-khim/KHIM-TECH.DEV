@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, BarChart3, Brain, Code, Database, TrendingUp, Users } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import AITrialSection from '@/components/AITrialSection'
 
 export default function Home() {
   const services = [
@@ -124,6 +125,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* AI Trial Section */}
+      <AITrialSection />
 
       {/* Why Choose Us Section */}
       <section className="py-16 bg-dark-50">

@@ -145,7 +145,7 @@ export default function Portfolio() {
             </div>
             <h2 className="text-3xl font-bold text-white mb-4 font-mono">Mission <span className="gradient-text">Critical</span></h2>
             <p className="text-xl text-gray-300">
-              Enterprise-scale solutions powering the world's most demanding systems
+              Enterprise-scale solutions powering the world&apos;s most demanding systems
             </p>
           </div>
           
@@ -248,7 +248,7 @@ export default function Portfolio() {
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Our elite engineering teams are standing by to architect your next 
-            mission-critical system. Let's build the impossible.
+            mission-critical system. Let&apos;s build the impossible.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

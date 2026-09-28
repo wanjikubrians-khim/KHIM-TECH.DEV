@@ -119,7 +119,7 @@ export default function About() {
                 className="bg-gradient-to-r from-neon-cyan to-neon-green text-black px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 inline-flex items-center justify-center font-mono"
               >
                 <Github className="mr-2 w-5 h-5" />
-                &gt; Founder's Portfolio
+                &gt; Founder&apos;s Portfolio
               </a>
               <a 
                 href="#founder-story" 
@@ -165,8 +165,8 @@ export default function About() {
                 <div className="border-l-4 border-neon-purple pl-6">
                   <h4 className="text-lg font-semibold text-white mb-3 font-mono">Innovation Philosophy</h4>
                   <p className="text-gray-300">
-                    "Every line of code, every algorithm, every solution is crafted to exceed enterprise 
-                    expectations. Innovation through precision engineering and data-driven decision making."
+                    &quot;Every line of code, every algorithm, every solution is crafted to exceed enterprise
+                    expectations. Innovation through precision engineering and data-driven decision making.&quot;
                   </p>
                 </div>
               </div>

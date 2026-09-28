@@ -9,6 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Brand palette (mirrors the CSS variables in globals.css :root)
+        'emerald-ink': {
+          DEFAULT: '#064E3B',
+          700: '#053d2e',
+          800: '#04352a',
+        },
+        champagne: {
+          DEFAULT: '#F8E7C9',
+          100: '#FCF3E3',
+          300: '#F1D9AE',
+        },
         primary: {
           50: '#f0f9ff',
           100: '#e0f2fe',

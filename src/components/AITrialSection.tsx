@@ -477,19 +477,6 @@ export default function CustomApp() {
             </div>
           </div>
         `,
-        <div style="display: flex; justify-content: space-around; align-items: end; height: 80px; margin-bottom: 16px;">
-                  <div style="width: 20px; height: 60px; background: #3b82f6; border-radius: 4px;"></div>
-                  <div style="width: 20px; height: 45px; background: #10b981; border-radius: 4px;"></div>
-                  <div style="width: 20px; height: 70px; background: #f59e0b; border-radius: 4px;"></div>
-                  <div style="width: 20px; height: 35px; background: #ef4444; border-radius: 4px;"></div>
-                </div>
-                <button style="padding: 8px 24px; background: #3b82f6; color: white; border: none; border-radius: 6px; cursor: pointer;">
-                  View Details
-                </button>
-              </div>
-            </div>
-          </div>
-        `
       }
     }
 

@@ -1,4 +1,4 @@
-import { ExternalLink, Github, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -88,24 +88,19 @@ export default function Portfolio() {
     }
   ]
 
-  const categories = ["All", "AI & Machine Learning", "Full-Stack Development", "Data Engineering", "Business Intelligence", "Data Visualization", "Web Development"]
-
   return (
-    <div className="min-h-screen bg-black">
+    <div className="brand-page">
       <Navbar />
-      
+
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-black via-dark-50 to-black">
+      <section className="pt-28 pb-16 bg-emerald-ink text-champagne">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="terminal-text text-sm mb-4">
-              &gt; Loading enterprise portfolio database...
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-mono">
-              Elite <span className="neon-text">Projects</span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Elite Projects
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Mission-critical systems deployed across Fortune 500 enterprises, 
+            <p className="text-xl text-champagne/90 max-w-3xl mx-auto">
+              Mission-critical systems deployed across Fortune 500 enterprises,
               processing billions of transactions and transforming industries worldwide.
             </p>
           </div>
@@ -113,71 +108,68 @@ export default function Portfolio() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-dark-50 border-y border-neon-cyan/20">
+      <section className="py-12 bg-champagne-100 border-y border-emerald-ink/15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-neon-cyan mb-2 font-mono">500+</div>
-              <div className="text-gray-300">Enterprise Systems</div>
+              <div className="text-3xl font-bold text-emerald-ink mb-2">500+</div>
+              <div className="text-emerald-ink/80">Enterprise Systems</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-neon-green mb-2 font-mono">100+</div>
-              <div className="text-gray-300">AI Platforms</div>
+              <div className="text-3xl font-bold text-emerald-ink mb-2">100+</div>
+              <div className="text-emerald-ink/80">AI Platforms</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-neon-purple mb-2 font-mono">10B+</div>
-              <div className="text-gray-300">Records Processed</div>
+              <div className="text-3xl font-bold text-emerald-ink mb-2">10B+</div>
+              <div className="text-emerald-ink/80">Records Processed</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-neon-cyan mb-2 font-mono">99.9%</div>
-              <div className="text-gray-300">System Uptime</div>
+              <div className="text-3xl font-bold text-emerald-ink mb-2">99.9%</div>
+              <div className="text-emerald-ink/80">System Uptime</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Projects */}
-      <section className="py-16 bg-black">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="terminal-text text-sm mb-4">
-              &gt; Accessing classified project archives...
-            </div>
-            <h2 className="text-3xl font-bold text-white mb-4 font-mono">Mission <span className="gradient-text">Critical</span></h2>
-            <p className="text-xl text-gray-300">
+            <h2 className="text-3xl font-bold text-emerald-ink mb-4">Mission Critical</h2>
+            <p className="text-xl text-emerald-ink/80">
               Enterprise-scale solutions powering the world&apos;s most demanding systems
             </p>
           </div>
-          
+
           <div className="space-y-16">
             {featuredProjects.map((project, index) => (
               <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="bg-gradient-to-r from-neon-cyan to-neon-green text-black px-3 py-1 rounded-full text-sm font-medium inline-block mb-4 font-mono">
+                  <div className="bg-emerald-ink text-champagne px-3 py-1 rounded-full text-sm font-medium inline-block mb-4">
                     {project.category}
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 font-mono">
+                  <h3 className="text-2xl font-bold text-emerald-ink mb-4">
                     {project.title}
                   </h3>
-                  <p className="text-gray-300 mb-6">
+                  <p className="text-emerald-ink/90 mb-6">
                     {project.description}
                   </p>
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-3 font-mono">Core Systems:</h4>
+                    <h4 className="text-sm font-semibold text-emerald-ink mb-3">Core Systems:</h4>
                     <ul className="space-y-2">
                       {project.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
-                          <div className="w-2 h-2 bg-neon-green rounded-full mr-3 animate-pulse"></div>
-                          <span className="text-gray-300 text-sm">{feature}</span>
+                          <div className="w-2 h-2 bg-emerald-ink rounded-full mr-3"></div>
+                          <span className="text-emerald-ink/90 text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-2 font-mono">Tech Stack:</h4>
+                    <h4 className="text-sm font-semibold text-emerald-ink mb-2">Tech Stack:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="bg-dark-50 text-neon-cyan px-3 py-1 rounded-full text-sm border border-neon-cyan/30">
+                        <span key={techIndex} className="bg-champagne-100 text-emerald-ink px-3 py-1 rounded-full text-sm border border-emerald-ink/25">
                           {tech}
                         </span>
                       ))}
@@ -185,9 +177,9 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                  <div className="glass-card p-4 rounded-lg neon-border">
-                    <div className="aspect-video bg-gradient-to-br from-neon-purple/20 to-neon-cyan/20 rounded-lg flex items-center justify-center">
-                      <div className="text-neon-cyan text-6xl font-bold opacity-50 font-mono">
+                  <div className="bg-white p-4 rounded-lg border border-emerald-ink/15 shadow-sm">
+                    <div className="aspect-video bg-champagne-100 rounded-lg flex items-center justify-center">
+                      <div className="text-emerald-ink text-6xl font-bold opacity-70">
                         {project.title.charAt(0)}
                       </div>
                     </div>
@@ -200,33 +192,30 @@ export default function Portfolio() {
       </section>
 
       {/* Additional Projects */}
-      <section className="py-16 bg-dark-50">
+      <section className="py-16 bg-champagne-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="terminal-text text-sm mb-4">
-              &gt; Scanning additional deployment records...
-            </div>
-            <h2 className="text-3xl font-bold text-white mb-4 font-mono">Active <span className="neon-text">Deployments</span></h2>
-            <p className="text-xl text-gray-300">
+            <h2 className="text-3xl font-bold text-emerald-ink mb-4">Active Deployments</h2>
+            <p className="text-xl text-emerald-ink/80">
               Additional enterprise solutions currently powering global operations
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {additionalProjects.map((project, index) => (
-              <div key={index} className="glass-card rounded-lg p-6 neon-border hover:shadow-lg hover:shadow-neon-cyan/20 transition-all duration-300">
-                <div className="bg-gradient-to-r from-neon-cyan to-neon-green text-black px-3 py-1 rounded-full text-sm font-medium inline-block mb-4 font-mono">
+              <div key={index} className="bg-white rounded-lg p-6 border border-emerald-ink/15 shadow-sm hover:shadow-md hover:border-emerald-ink/40 transition-all duration-300">
+                <div className="bg-emerald-ink text-champagne px-3 py-1 rounded-full text-sm font-medium inline-block mb-4">
                   {project.category}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 font-mono">
+                <h3 className="text-xl font-semibold text-emerald-ink mb-3">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 mb-4 text-sm">
+                <p className="text-emerald-ink/90 mb-4 text-sm">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="bg-black text-neon-cyan px-2 py-1 rounded text-xs border border-neon-cyan/30">
+                    <span key={techIndex} className="bg-champagne-100 text-emerald-ink px-2 py-1 rounded text-xs border border-emerald-ink/25">
                       {tech}
                     </span>
                   ))}
@@ -238,31 +227,28 @@ export default function Portfolio() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-black border-y border-neon-cyan/20">
+      <section className="py-16 bg-emerald-ink text-champagne">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="terminal-text text-sm mb-4">
-            &gt; system.ready_for_new_mission: TRUE
-          </div>
-          <h2 className="text-3xl font-bold text-white mb-4 font-mono">
-            Ready to <span className="neon-text">Deploy</span>?
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Deploy?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Our elite engineering teams are standing by to architect your next 
+          <p className="text-xl text-champagne/90 mb-8 max-w-2xl mx-auto">
+            Our elite engineering teams are standing by to architect your next
             mission-critical system. Let&apos;s build the impossible.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-neon-cyan to-neon-green text-black px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 inline-flex items-center justify-center font-mono"
+            <Link
+              href="/contact"
+              className="bg-champagne text-emerald-ink px-8 py-3 rounded-lg font-semibold hover:bg-champagne-300 transition-all duration-300 inline-flex items-center justify-center"
             >
-              &gt; Initialize Mission
+              Initialize Mission
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              href="/services" 
-              className="border border-neon-cyan text-neon-cyan px-8 py-3 rounded-lg font-semibold hover:bg-neon-cyan/10 transition-all duration-300 font-mono neon-border"
+            <Link
+              href="/services"
+              className="border border-champagne text-champagne px-8 py-3 rounded-lg font-semibold hover:bg-emerald-ink-700 transition-all duration-300 inline-flex items-center justify-center"
             >
-              &gt; View Capabilities
+              View Capabilities
             </Link>
           </div>
         </div>

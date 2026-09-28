@@ -1,151 +1,114 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react'
+import { Calendar, Clock, ArrowLeft } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { getAllSlugs, getPostBySlug } from '@/lib/posts'
+import { SITE_NAME, SITE_URL } from '@/lib/site'
 
-// This will be replaced with actual API call later
-async function getBlogPost(slug: string) {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/api/posts/${slug}`, {
-      cache: 'no-store'
-    })
-    if (!res.ok) return null
-    return await res.json()
-  } catch {
-    return null
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return getAllSlugs().map((slug) => ({ slug }))
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const post = await getPostBySlug(params.slug)
+  if (!post) return {}
+  const url = `${SITE_URL}/blog/${post.slug}`
+  return {
+    title: post.title,
+    description: post.description,
+    keywords: post.tags.join(', '),
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      title: `${post.title} | ${SITE_NAME}`,
+      description: post.description,
+      type: 'article',
+      url,
+      publishedTime: post.date || undefined,
+      tags: post.tags,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+    },
   }
 }
 
 function formatDate(dateString: string) {
+  if (!dateString) return ''
   const date = new Date(dateString)
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  })
-}
-
-function getReadingTime(content: string) {
-  const wordsPerMinute = 200
-  const words = content.split(' ').length
-  const minutes = Math.ceil(words / wordsPerMinute)
-  return `${minutes} min read`
-}
-
-// Convert markdown-like content to HTML (basic implementation)
-function formatContent(content: string) {
-  return content
-    .replace(/\n\n/g, '</p><p>')
-    .replace(/\n/g, '<br>')
-    .replace(/^/, '<p>')
-    .replace(/$/, '</p>')
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-    .replace(/`(.*?)`/g, '<code class="bg-gray-800 px-2 py-1 rounded text-sm font-mono">$1</code>')
+  if (Number.isNaN(date.getTime())) return dateString
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
 }
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getBlogPost(params.slug)
-
-  if (!post) {
-    notFound()
-  }
-
-  const formattedContent = formatContent(post.content)
+  const post = await getPostBySlug(params.slug)
+  if (!post) notFound()
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="brand-page">
       <Navbar />
-      
-      {/* Back to Blog */}
-      <div className="pt-20 pb-4 bg-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div className="pt-28 pb-4">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/blog"
-            className="inline-flex items-center text-neon-cyan hover:text-neon-green transition-colors font-mono text-sm"
+            className="inline-flex items-center text-emerald-ink font-semibold hover:text-emerald-ink-700"
           >
-            <ArrowLeft className="mr-2 w-4 h-4" />
-            &gt; Back to Blog
+            <ArrowLeft className="mr-1.5 w-4 h-4" aria-hidden="true" />
+            Back to Blog
           </Link>
         </div>
       </div>
 
-      {/* Article Header */}
-      <article className="pb-16 bg-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <header className="mb-12">
-            <div className="terminal-text text-sm mb-4">
-              &gt; Loading article.id: {params.slug}
-            </div>
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 font-mono leading-tight">
+      <article className="pb-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <header className="mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-emerald-ink mb-4 leading-tight">
               {post.title}
             </h1>
-            
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400 mb-8 font-mono">
-              <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-2 text-neon-cyan" />
-                {formatDate(post.created_at)}
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-2 text-neon-green" />
-                {getReadingTime(post.content)}
-              </div>
-              <div className="flex items-center">
-                <Share2 className="w-4 h-4 mr-2 text-neon-purple" />
-                Topic: {post.topic}
-              </div>
+            <div className="flex flex-wrap items-center gap-5 text-sm text-emerald-ink/80 mb-5">
+              <span className="inline-flex items-center">
+                <Calendar className="w-4 h-4 mr-1.5" aria-hidden="true" />
+                {formatDate(post.date)}
+              </span>
+              <span className="inline-flex items-center">
+                <Clock className="w-4 h-4 mr-1.5" aria-hidden="true" />
+                {post.readingTimeMinutes} min read
+              </span>
             </div>
-
-            {post.keywords && post.keywords.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-8">
-                {post.keywords.map((keyword: string, i: number) => (
-                  <span 
-                    key={i} 
-                    className="bg-neon-cyan/20 text-neon-cyan px-3 py-1 rounded text-sm font-mono"
+            {post.tags.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {post.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-white text-emerald-ink border border-emerald-ink/25 px-2.5 py-0.5 rounded text-xs"
                   >
-                    {keyword}
+                    {tag}
                   </span>
                 ))}
               </div>
             )}
           </header>
 
-          {/* Article Content */}
-          <div className="prose prose-invert prose-lg max-w-none">
-            <div className="glass-effect p-8 rounded-lg neon-border">
-              <div 
-                className="text-gray-300 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: formattedContent }}
-              />
-            </div>
-          </div>
+          {/* Rendered from Markdown and sanitized (no raw HTML) in src/lib/posts.ts */}
+          <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
 
-          {/* Article Footer */}
-          <footer className="mt-12 pt-8 border-t border-neon-cyan/20">
-            <div className="glass-effect p-6 rounded-lg">
-              <div className="terminal-text text-xs mb-3">
-                &gt; Article generated by KHIM-TECH AI Blog System
-              </div>
-              <p className="text-gray-300 text-sm mb-4">
-                This article was automatically generated as part of our commitment to sharing 
-                knowledge about data science, machine learning, and full-stack development.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="bg-gradient-to-r from-neon-cyan to-neon-green text-black px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 inline-flex items-center justify-center font-mono"
-                >
-                  &gt; Discuss This Article
-                </Link>
-                <Link
-                  href="/blog"
-                  className="border border-neon-cyan text-neon-cyan px-6 py-3 rounded-lg font-semibold hover:bg-neon-cyan/10 transition-all duration-300 font-mono neon-border inline-flex items-center justify-center"
-                >
-                  &gt; More Articles
-                </Link>
-              </div>
-            </div>
+          <footer className="mt-12 pt-8 border-t border-emerald-ink/20">
+            <Link
+              href="/blog"
+              className="inline-flex items-center bg-emerald-ink text-champagne px-5 py-2.5 rounded-lg font-semibold hover:bg-emerald-ink-700 transition-colors"
+            >
+              More Articles
+            </Link>
           </footer>
         </div>
       </article>
@@ -153,11 +116,4 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       <Footer />
     </div>
   )
-}
-
-// This generates the possible paths at build time
-export async function generateStaticParams() {
-  // In a real implementation, this would fetch all blog post slugs
-  // For now, return empty array since posts are dynamic
-  return []
 }

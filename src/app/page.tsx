@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Brain, Database, Code, BarChart3, Shield, Zap, Github } from 'lucide-react'
+import { ArrowRight, Brain, Database, Code, BarChart3, Shield, Zap, Github, TrendingUp, Users } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import AITrialSection from '@/components/AITrialSection'
@@ -132,8 +132,8 @@ export default function Home() {
                   <div className="border-l-2 border-neon-cyan pl-4">
                     <h4 className="text-white font-semibold font-mono mb-2">Leadership Philosophy</h4>
                     <p className="text-gray-300 text-sm">
-                      "Innovation through precision engineering and data-driven decision making. 
-                      Every line of code, every algorithm, every solution is crafted to exceed enterprise expectations."
+                      &quot;Innovation through precision engineering and data-driven decision making.
+                      Every line of code, every algorithm, every solution is crafted to exceed enterprise expectations.&quot;
                     </p>
                   </div>
                   <div className="border-l-2 border-neon-green pl-4">
@@ -148,8 +148,8 @@ export default function Home() {
                   <div className="border-l-2 border-neon-purple pl-4">
                     <h4 className="text-white font-semibold font-mono mb-2">Mission Statement</h4>
                     <p className="text-gray-300 text-sm">
-                      "Empowering enterprises with cutting-edge technology solutions that drive 
-                      measurable business outcomes and sustainable growth."
+                      &quot;Empowering enterprises with cutting-edge technology solutions that drive
+                      measurable business outcomes and sustainable growth.&quot;
                     </p>
                   </div>
                 </div>
